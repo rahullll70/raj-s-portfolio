@@ -4,24 +4,24 @@ const Work = () => {
   const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
   
   return (
-    <main className='relative min-h-screen w-screen text-white overflow-x-hidden'>
+    <main className='w-screen min-h-screen overflow-x-hidden text-white'>
       <div className='pt-5'>
-        <h1 className='text-center text-4xl font-starlightRune'>ShytAnimo</h1>
+        <h1 className='text-4xl text-center font-starlightRune'>ShytAnimo</h1>
       </div>
       
-      <div className='bg-secondary h-70 mx-10 rounded-xl flex items-center justify-center gap-10 my-10 text-center overflow-hidden'>
-        <h1 className='text-[200px] font-rothefight uppercase px-5'>
+      <div className='flex items-center justify-center gap-10 mx-2 my-10 overflow-hidden text-center rounded-md bg-secondary h-25 md:h-67 md:mx-10 md:rounded-xl'>
+        <h1 className='md:text-[170px] text-7xl mb-7 font-rothefight uppercase px-5'>
           all work
         </h1>
       </div>
       
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-10 my-10 pb-10'>
+      <div className='grid grid-cols-1 gap-2 pb-10 my-10 md:grid-cols-2 lg:grid-cols-3 md:mx-10'>
         {items.map((item) => (
           <img 
             key={item}
             src={`/images/poster_${item}.png`} 
             alt={`poster ${item}`}
-            className='w-full rounded-md hover:scale-102 transition-transform duration-300 cursor-pointer'
+            className='w-full transition-transform duration-300 rounded-md cursor-pointer hover:scale-102'
           />
         ))}
       </div>
