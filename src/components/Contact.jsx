@@ -2,94 +2,93 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <main className='relative max-h-screen w-screen text-white overflow-hidden'>
-      {/* <div className='pt-5'>
-        <h1 className='text-center text-4xl font-starlightRune'>ShytAnimo</h1>
-      </div> */}
-      <div className='flex items-start justify-between font-cartographCF px-40 mt-40 uppercase'>
-        <div className='grid gap-2'>
-          <h1 className='font-monumentExtended text-3xl'>contact</h1>
-          <a className='opacity-50' href='mailto:youremail@gmail.com'>
-            @gmail.com
+    <main className='flex flex-col w-screen min-h-screen overflow-x-hidden text-white'>
+      <div className='px-8 mt-20 md:flex md:items-start md:justify-between font-cartographCF md:px-40 md:mt-40'>
+        <div className='gap-2 mb-8 md:grid md:mb-0'>
+          <h1 className='text-xl uppercase font-monumentExtended md:text-3xl'>contact</h1>
+          <a className='transition-opacity opacity-50 hover:opacity-100' href='mailto:youremail@gmail.com'>
+            shytanimo@gmail.com
           </a>
         </div>
-        <div className='grid grid-cols-1 gap-2'>
-          <h1 className='font-monumentExtended text-3xl'>explore</h1>
-          <a className='opacity-50' href='/'>
-            home
+        <div className='grid grid-cols-1 gap-2 mb-8 md:mb-0'>
+          <h1 className='text-xl uppercase font-monumentExtended md:text-3xl'>explore</h1>
+          <a className='transition-opacity opacity-50 hover:opacity-100 text-md' href='/'>
+            Home
           </a>
-          <a className='opacity-50' href='/about'>
-            about me
+          <a className='transition-opacity opacity-50 hover:opacity-100' href='/about'>
+            About Me
           </a>
-          <a className='opacity-50' href='/projects'>
-            projects
+          <a className='transition-opacity opacity-50 hover:opacity-100' href='/projects'>
+            Projects
           </a>
         </div>
-        <div className='grid grid-cols-1 gap-2'>
-          <h1 className='font-monumentExtended text-3xl'>hire</h1>
+        <div className='grid grid-cols-1 gap-2 mb-8 md:mb-0'>
+          <h1 className='text-xl uppercase font-monumentExtended md:text-3xl'>hire</h1>
           <a
-            className='opacity-50'
+            className='transition-opacity opacity-50 hover:opacity-100'
             href='https://upwork.com/yourprofile'
             target='_blank'
             rel='noopener noreferrer'
           >
-            upwork
+            Upwork
           </a>
           <a
-            className='opacity-50'
+            className='transition-opacity opacity-50 hover:opacity-100'
             href='https://fiverr.com/yourprofile'
             target='_blank'
             rel='noopener noreferrer'
           >
-            fiverr
+            Fiverr
           </a>
           <a
-            className='opacity-50'
+            className='transition-opacity opacity-50 hover:opacity-100'
             href='https://freelancer.com/yourprofile'
             target='_blank'
             rel='noopener noreferrer'
           >
-            freelancer
+            Freelancer
           </a>
         </div>
-        <div className='grid grid-cols-1 gap-2'>
-          <h1 className='font-monumentExtended text-3xl'>socials</h1>
+        <div className='grid grid-cols-1 gap-2 mb-8 md:mb-0'>
+          <h1 className='text-xl uppercase font-monumentExtended md:text-3xl'>socials</h1>
           <a
-            className='opacity-50'
+            className='transition-opacity opacity-50 hover:opacity-100'
             href='https://instagram.com/yourhandle'
             target='_blank'
             rel='noopener noreferrer'
           >
-            instagram
+            Instagram
           </a>
           <a
-            className='opacity-50'
+            className='transition-opacity opacity-50 hover:opacity-100'
             href='https://pinterest.com/yourhandle'
             target='_blank'
             rel='noopener noreferrer'
           >
-            pinterest
+            Pinterest
           </a>
           <a
-            className='opacity-50'
+            className='transition-opacity opacity-50 hover:opacity-100'
             href='https://linkedin.com/in/yourprofile'
             target='_blank'
             rel='noopener noreferrer'
           >
-            linkedin
+            Linkedin
           </a>
           <a
-            className='opacity-50'
+            className='transition-opacity opacity-50 hover:opacity-100'
             href='https://dribbble.com/yourhandle'
             target='_blank'
             rel='noopener noreferrer'
           >
-            dribbble
+            Dribbble
           </a>
         </div>
       </div>
-      <div className='text-center mt-50 overflow-hidden'>
-        <h1 className='text-[230px] font-monumentExtended overflow-hidden'>ShytAnimo</h1>
+      <div className='mt-auto text-center '>
+        <h1 className='text-5xl md:text-[210px] font-monumentExtended'>
+          ShytAnimo
+        </h1>
       </div>
     </main>
   );
