@@ -7,6 +7,7 @@ import Work from './pages/Work';
 import Contact from './components/Contact';
 import ScrollBar from './components/ScrollBar';
 import CustomCursor from './components/CustomCursor';
+import CurvedLoop from './components/CurvedLoop';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path='/about' element={<AboutMe />} />
           <Route path='/work' element={<Work />} />
         </Routes>
+        <CurvedLoop />
         <ScrollBar />
         <Contact />
       </main>
