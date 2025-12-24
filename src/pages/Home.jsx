@@ -1,12 +1,14 @@
 import React from 'react';
-import CurvedLoop from '../components/CurvedLoop';
+import ScrollVelocity from '../components/ScrollVelocity';
 
 const Home = () => {
   return (
-    <main className='relative w-full text-white'>
+    <main className='relative w-full text-white cursor-none'>
       <section>
         <div className='pt-5'>
-          <h1 className='text-4xl text-center font-starlightRune'>ShytAnimo</h1>
+          <h1 className='text-4xl text-center lg:text-6xl font-starlightRune'>
+            ShytAnimo
+          </h1>
         </div>
 
         <div className='bg-secondary min-h-[280px] md:h-80 mx-2 md:mx-5 rounded-xl relative overflow-hidden my-10 p-5 md:p-8'>
@@ -21,10 +23,10 @@ const Home = () => {
             </p>
           </div>
 
-          <p className='mt-6 md:mt-0 md:absolute md:right-10 lg:right-10 md:bottom-8 lg:bottom-1 md:w-96 lg:w-[480px] font-cartographCF text-xs md:text-sm leading-relaxed'>
+          <p className='mt-6 md:mt-0 md:absolute md:right-10 md:bottom-1 w-full md:max-w-[600px] lg:max-w-[700px] font-cartographCF text-xs md:text-sm leading-relaxed md:leading-loose tracking-wide bg-secondary'>
             I'm Raj, a graphic designer working professionally as ShytAnimo
             (solo designer). I create modern, minimal and aesthetic posters,
-            editorial designs, social media visuals, magazine covers, and
+            editorial <br /> designs, social media visuals, magazine covers, and
             product packaging.
           </p>
         </div>
@@ -36,14 +38,11 @@ const Home = () => {
             alt='poster'
           />
         </div>
-        <div className=''>
-          <CurvedLoop
-            marqueeText='Shyt ✦ Animo ✦ Shyt ✦ Animo ✦'
-            speed={3}
-            curveAmount={0}
-            direction='right'
-            interactive={true}
-            className=' custom-text-style'
+        <div>
+          <ScrollVelocity
+            texts={['RAJ - 2025 - PORTFOLIO - SHYTANIMO -']}
+            velocity={100}
+            className='py-5 bg-white custom-scroll-text font-monumentExtended text-accent'
           />
         </div>
       </section>

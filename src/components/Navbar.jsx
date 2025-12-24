@@ -29,6 +29,10 @@ const Navbar = () => {
               className='relative px-0 text-white group'
             >
               {link.name}
+              <span
+                className={`absolute left-0 -bottom-1 h-[1px] bg-white transition-all duration-300 origin-right
+                ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`}
+              ></span>
             </NavLink>
           ))}
         </div>
@@ -58,13 +62,14 @@ const Navbar = () => {
       >
         <div className='flex flex-col items-start justify-center h-full px-8 sm:px-12 md:px-16'>
           {/* Menu Links */}
+
           <div className='w-full space-y-4'>
             {links.map((link, index) => (
               <NavLink
                 key={link.name}
                 to={link.path}
                 onClick={closeMenu}
-                className={`block text-white font-monumentExtended text-4xl sm:text-5xl md:text-6xl uppercase leading-tight hover:opacity-70 transition-all duration-300 ${
+                className={`block relative text-white font-monumentExtended text-4xl sm:text-5xl md:text-6xl uppercase leading-tight transition-all duration-300 group ${
                   isOpen
                     ? 'translate-x-0 opacity-100'
                     : 'translate-x-8 opacity-0'
@@ -77,6 +82,12 @@ const Navbar = () => {
                 {location.pathname === link.path && (
                   <span className='inline-block w-3 h-3 ml-4 align-middle bg-white rounded-full'></span>
                 )}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[1px] bg-white transition-all duration-300 origin-right
+         ${
+           location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
+         }`}
+                ></span>
               </NavLink>
             ))}
           </div>
