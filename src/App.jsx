@@ -14,7 +14,7 @@ const App = () => {
     <Router>
       <main className='relative w-full min-h-screen overflow-x-hidden cursor-default'>
         <Navbar />
-        <CustomCursor />
+        <CustomCursor className='hidden md:block' />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<AboutMe />} />

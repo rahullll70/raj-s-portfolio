@@ -11,7 +11,7 @@ const Home = () => {
           </h1>
         </div>
 
-        <div className='bg-secondary min-h-[280px] md:h-80 mx-2 md:mx-5 rounded-xl relative overflow-hidden my-10 p-5 md:p-8'>
+        <div className='relative p-5 mx-2 my-10 overflow-hidden bg-secondary min-h-72 md:h-80 md:mx-5 rounded-xl md:p-8'>
           <h1 className='text-7xl sm:text-7xl md:text-8xl lg:text-[150px] xl:text-[200px] md:mt-2 font-rothefight uppercase leading-none'>
             visual echo
           </h1>
