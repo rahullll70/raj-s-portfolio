@@ -13,6 +13,11 @@ const Home = () => {
         className='py-5 bg-white custom-scroll-text font-monumentExtended text-accent'
       />
       <FeaturedWork />
+      <ScrollVelocity
+        texts={['RAJ - 2025 - PORTFOLIO - SHYTANIMO -']}
+        velocity={100}
+        className='py-5 bg-white custom-scroll-text font-monumentExtended text-accent'
+      />
     </main>
   );
 };

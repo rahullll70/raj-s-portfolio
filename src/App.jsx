@@ -8,10 +8,11 @@ import Contact from './components/Contact';
 import ScrollBar from './components/ScrollBar';
 import CustomCursor from './components/CustomCursor';
 import ScrollVelocity from './components/ScrollVelocity';
+import Loader from './components/Loader';
 
 const App = () => {
   return (
-    <Router>
+    <Loader>
       <main className='relative w-full min-h-screen overflow-x-hidden cursor-default'>
         <Navbar />
         <CustomCursor className='hidden md:block' />
@@ -24,7 +25,7 @@ const App = () => {
         <Contact />
         <ScrollBar />
       </main>
-    </Router>
+    </Loader>
   );
 };
 

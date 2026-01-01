@@ -179,7 +179,7 @@ const Contact = () => {
         </div>
       </div>
       <div className='mt-auto text-center '>
-        <h1 className='text-5xl md:text-[9rem] lg:text-[15rem] font-monumentExtended'>
+        <h1 className='text-5xl md:text-[9rem] lg:text-[13rem] font-monumentExtended'>
           ShytAnimo
         </h1>
       </div>
