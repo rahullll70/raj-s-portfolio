@@ -59,14 +59,38 @@ body {
   src: url(/fonts/StarlightRune.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'arome';
+  src: url(/fonts/Arome-Display.ttf) format('truetype');
+}
+
 @theme {
   --font-monumentExtended: 'monumentExtended', sans-serif;
   --font-cartographCF: 'cartographCF', sans-serif;
   --font-rothefight: 'rothefight', sans-serif;
   --font-starlightRune: 'starlightRune', sans-serif;
+  --font-arome: 'arome', sans-serif;
 
   --color-primary: #171717;
   --color-secondary: #1b1b1b;
   --color-accent: #212121;
-  --color-text-primary: #ffffff;
+  --color-special: #b90e0a;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
 }
