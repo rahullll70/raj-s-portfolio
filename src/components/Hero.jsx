@@ -32,8 +32,8 @@ const Hero = () => {
 
         <div className='flex items-center justify-center mx-2 mb-10 md:mx-10'>
           <video
-            className='object-cover w-full'
-            src='/videos/hero_video.mp4'
+            className='object-cover w-full rounded-lg '
+           src='/videos/hero_video.mp4'
             autoPlay
             loop
             muted
