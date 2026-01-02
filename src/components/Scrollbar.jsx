@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const VisualScrollbar = () => {
   const [thumbTop, setThumbTop] = useState(0);
@@ -12,6 +13,11 @@ const VisualScrollbar = () => {
     paddingBottom: 0,
     available: 0,
   });
+  
+  const location = useLocation();
+  
+  // Hide scrollbar on contact page
+  const shouldHide = location.pathname === '/contact';
 
   const measure = useCallback(() => {
     if (!channelRef.current || !thumbRef.current) return;
@@ -87,6 +93,9 @@ const VisualScrollbar = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, [measure, updateThumb]);
+
+  // Return null if on contact page
+  if (shouldHide) return null;
 
   return (
     <>
@@ -187,8 +196,6 @@ const VisualScrollbar = () => {
           />
         </div>
       </div>
-
-      {/* Demo Content */}
     </>
   );
 };

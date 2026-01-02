@@ -12,20 +12,26 @@ import Loader from './components/Loader';
 
 const App = () => {
   return (
-    <Loader>
-      <main className='relative w-full min-h-screen overflow-x-hidden cursor-default'>
-        <Navbar />
-        <CustomCursor className='hidden md:block' />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<AboutMe />} />
-          <Route path='/work' element={<Work />} />
-        </Routes>
-        <ScrollVelocity />
-        <Contact />
-        <ScrollBar />
-      </main>
-    </Loader>
+    <Router>
+      <Loader className='z-50'>
+        <main className='relative w-full min-h-screen overflow-x-hidden cursor-default'>
+          <Navbar />
+          <div className='hidden md:block'>
+            <CustomCursor />
+          </div>
+
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<AboutMe />} />
+            <Route path='/work' element={<Work />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
+
+          <ScrollVelocity />
+          <ScrollBar />
+        </main>
+      </Loader>
+    </Router>
   );
 };
 

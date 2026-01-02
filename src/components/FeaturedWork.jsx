@@ -7,7 +7,7 @@ const ImageItem = ({ num, setActiveImage }) => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [showTooltip, setShowTooltip] = useState(false);
 
-  const navigate = useNavigate();
+  
 
   const handleMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -55,6 +55,8 @@ const ImageItem = ({ num, setActiveImage }) => {
 const FeaturedWork = () => {
   const images = [1, 2, 3, 4, 5, 6, 7, 8];
   const [activeImage, setActiveImage] = useState(null);
+
+  const navigate = useNavigate();
 
   return (
     <section className='relative min-h-screen'>

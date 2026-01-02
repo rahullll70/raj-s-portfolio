@@ -40,7 +40,7 @@ const Work = () => {
           { clipPath: 'inset(100% 0% 0% 0%)' },
           {
             clipPath: 'inset(0% 0% 0% 0%)',
-            duration: 1.2,
+            duration: 2,
             ease: 'power4.out',
             scrollTrigger: {
               trigger: item,
