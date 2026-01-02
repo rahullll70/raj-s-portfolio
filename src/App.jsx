@@ -26,7 +26,6 @@ const App = () => {
             <Route path='/work' element={<Work />} />
             <Route path='/contact' element={<Contact />} />
           </Routes>
-
           <ScrollVelocity />
           <ScrollBar />
         </main>

@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import FeaturedWork from '../components/FeaturedWork';
 import ScrollVelocity from '../components/ScrollVelocity';
+import Contact from '../components/Contact';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         velocity={100}
         className='py-5 bg-white custom-scroll-text font-monumentExtended text-accent'
       />
+      <Contact />
     </main>
   );
 };
