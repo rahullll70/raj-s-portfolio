@@ -13,7 +13,7 @@ const Contact = () => {
       word.style.display = 'inline-block';
       word.style.position = 'relative';
       word.style.padding = '4px 12px';
-      
+
       // Create background element
       const bg = document.createElement('span');
       bg.style.position = 'absolute';
@@ -27,52 +27,56 @@ const Contact = () => {
       bg.style.transform = 'scaleY(0)';
       word.style.zIndex = '1';
       word.insertBefore(bg, word.firstChild);
-      
+
       // Wrap text content
-      const textContent = Array.from(word.childNodes)
-        .filter(node => node !== bg);
+      const textContent = Array.from(word.childNodes).filter(
+        (node) => node !== bg
+      );
       const textWrapper = document.createElement('span');
       textWrapper.style.display = 'inline-block';
       textWrapper.style.position = 'relative';
-      textContent.forEach(node => textWrapper.appendChild(node));
+      textContent.forEach((node) => textWrapper.appendChild(node));
       word.appendChild(textWrapper);
-      
+
       word.addEventListener('mouseenter', () => {
         const tl = gsap.timeline();
-        
+
         // Background slides up and stays
         tl.to(bg, {
           scaleY: 1,
           duration: 0.3,
-          ease: 'power2.out'
+          ease: 'power2.out',
         })
-        // Text goes up
-        .to(textWrapper, {
-          y: '-100%',
-          duration: 0.3,
-          ease: 'power2.in'
-        }, '-=0.1')
-        // Reset text position
-        .set(textWrapper, { y: '100%' })
-        // Text comes back
-        .to(textWrapper, {
-          y: '0%',
-          duration: 0.3,
-          ease: 'power2.out'
-        });
+          // Text goes up
+          .to(
+            textWrapper,
+            {
+              y: '-100%',
+              duration: 0.3,
+              ease: 'power2.in',
+            },
+            '-=0.1'
+          )
+          // Reset text position
+          .set(textWrapper, { y: '100%' })
+          // Text comes back
+          .to(textWrapper, {
+            y: '0%',
+            duration: 0.3,
+            ease: 'power2.out',
+          });
       });
-      
+
       word.addEventListener('mouseleave', () => {
         // Background slides down
         gsap.to(bg, {
           scaleY: 0,
           duration: 0.3,
-          ease: 'power2.in'
+          ease: 'power2.in',
         });
       });
     });
   });
-
 
   return (
     <main className='flex flex-col w-screen min-h-screen overflow-x-hidden text-white'>
@@ -85,7 +89,7 @@ const Contact = () => {
             className='pt-5 transition-opacity opacity-50 split-text hover:opacity-100'
             href='mailto:youremail@gmail.com'
           >
-            shytanimo@gmail.com
+            raj.shytanimo@gmail.com
           </a>
         </div>
         <div className='grid grid-cols-1 gap-2 mb-8 md:mb-0'>
@@ -117,7 +121,7 @@ const Contact = () => {
           </h1>
           <a
             className='pt-5 transition-opacity opacity-50 split-text hover:opacity-100'
-            href='https://upwork.com/yourprofile'
+            href='https://www.upwork.com/freelancers/~012d973d4286e89d35'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -125,7 +129,7 @@ const Contact = () => {
           </a>
           <a
             className='transition-opacity opacity-50 split-text hover:opacity-100'
-            href='https://fiverr.com/yourprofile'
+            href='https://www.fiverr.com/shytanimo'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -133,7 +137,7 @@ const Contact = () => {
           </a>
           <a
             className='transition-opacity opacity-50 split-text hover:opacity-100'
-            href='https://freelancer.com/yourprofile'
+            href='https://www.freelancer.in/u/ShytAnimo'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -146,7 +150,7 @@ const Contact = () => {
           </h1>
           <a
             className='pt-5 transition-opacity opacity-50 split-text hover:opacity-100'
-            href='https://instagram.com/yourhandle'
+            href='https://www.instagram.com/shytanimo/'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -154,7 +158,7 @@ const Contact = () => {
           </a>
           <a
             className='transition-opacity opacity-50 split-text hover:opacity-100'
-            href='https://pinterest.com/yourhandle'
+            href='https://pinterest.com/ShytAnimo/'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -162,7 +166,7 @@ const Contact = () => {
           </a>
           <a
             className='transition-opacity opacity-50 split-text hover:opacity-100'
-            href='https://linkedin.com/in/yourprofile'
+            href='https://www.linkedin.com/in/shytanimo/'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -170,7 +174,7 @@ const Contact = () => {
           </a>
           <a
             className='transition-opacity opacity-50 split-text hover:opacity-100'
-            href='https://dribbble.com/yourhandle'
+            href='https://dribbble.com/ShytAnimo'
             target='_blank'
             rel='noopener noreferrer'
           >
