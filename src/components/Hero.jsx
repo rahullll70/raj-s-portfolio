@@ -11,7 +11,7 @@ const Hero = () => {
         </div>
 
         <div className='relative p-5 mx-2 my-10 overflow-hidden bg-secondary min-h-72 md:h-80 md:mx-5 rounded-xl md:p-8 '>
-          <h1 className='text-7xl xs:text-5xl md:text-9xl lg:text-[150px] xl:text-[200px] md:mt-2 font-rothefight uppercase leading-none'>
+          <h1 className='text-[53px] xs:text-5xl md:text-9xl lg:text-[150px] xl:text-[200px] md:mt-2 font-rothefight uppercase leading-none'>
             visual echo
           </h1>
 
@@ -31,10 +31,12 @@ const Hero = () => {
         </div>
 
         <div className='flex items-center justify-center mx-2 mb-10 md:mx-10'>
-          <img
-            className='object-cover w-full max-w-7xl rounded-xl'
-            src='/images/poster_1.jpg'
-            alt='poster'
+          <video
+            className='object-cover w-full rounded-lg '
+           src='/videos/hero_video.mp4'
+            autoPlay
+            loop
+            muted
           />
         </div>
       </section>
