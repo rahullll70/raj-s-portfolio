@@ -58,7 +58,7 @@ const Loader = ({ children }) => {
       setIsTransitioning(true);
       setHideLoader(false);
       window.scrollTo(0, 0);
-      
+
       // Small delay before animation
       setTimeout(() => {
         runLoaderAnimation();
@@ -71,11 +71,11 @@ const Loader = ({ children }) => {
       {(!hideLoader || isTransitioning) && (
         <div
           ref={loaderRef}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black will-change-transform"
+          className='fixed inset-0 z-[9999] flex items-center justify-center bg-black will-change-transform'
         >
-          <h1 
+          <h1
             ref={textRef}
-            className="text-4xl text-white loader-text font-monumentExtended"
+            className='text-4xl text-white loader-text font-monumentExtended'
           >
             LOADING
           </h1>
