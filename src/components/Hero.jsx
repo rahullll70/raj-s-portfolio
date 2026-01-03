@@ -14,6 +14,10 @@ const Hero = () => {
           <h1 className='text-[53px] xs:text-5xl md:text-9xl lg:text-[150px] xl:text-[200px] md:mt-2 font-rothefight uppercase leading-none'>
             visual echo
           </h1>
+          <div className='absolute overflow-hidden right-5 w-30 top-5 md:bottom-auto md:top-15 md:h-full md:w-auto md:right-50'>
+            <img src="/images/mountains.gif" alt="" />
+          </div>
+          
 
           <div className='flex items-center gap-2 mt-16 md:mt-0 md:absolute md:right-8 md:top-8'>
             <p className='flex items-center text-xs uppercase font-cartographCF md:text-lg'>
@@ -22,10 +26,10 @@ const Hero = () => {
             </p>
           </div>
 
-          <p className='mt-6 md:mt-0 md:absolute md:right-0 md:bottom-1 w-full md:max-w-[700px] lg:max-w-[650px] font-cartographCF text-xs md:text-sm leading-relaxed md:leading-loose tracking-wide bg-secondary'>
-            I'm Raj, a graphic designer working professionally as ShytAnimo
-            (solo designer). I create modern, minimal and aesthetic posters,
-            editorial <br /> designs, social media visuals, magazine covers, and
+          <p className='mt-6 md:mt-0 md:absolute md:right-0 md:bottom-1 w-full md:max-w-[700px] lg:max-w-[500px] font-cartographCF text-xs md:text-sm leading-relaxed md:leading-loose tracking-wide bg-secondary'>
+            I'm Raj, a graphic designer working professionally <br /> as ShytAnimo
+            (solo designer). I create modern,<br /> minimal and aesthetic posters,
+            editorial  designs, social media visuals, magazine covers, and
             product packaging.
           </p>
         </div>
