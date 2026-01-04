@@ -4,85 +4,48 @@ import gsap from 'gsap';
 
 const Loader = ({ children }) => {
   const loaderRef = useRef(null);
-  const textRef = useRef(null);
-  const [showApp, setShowApp] = useState(false);
-  const [hideLoader, setHideLoader] = useState(false);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
-  const isFirstLoad = useRef(true);
 
-  // Function to run loader animation
   const runLoaderAnimation = () => {
-    const tl = gsap.timeline({
-      defaults: { ease: 'power4.inOut' },
-    });
-
-    // Reset states
-    gsap.set('.loader-text', { y: 0, opacity: 1 });
+    
+    setIsLoading(true);
     gsap.set(loaderRef.current, { yPercent: 0 });
 
-    // fake preload delay
-    tl.to({}, { duration: 1 })
+    const tl = gsap.timeline({ defaults: { ease: 'power4.inOut' } });
 
-      // text exit
-      .to('.loader-text', {
-        y: -50,
-        opacity: 0,
-        duration: 0.6,
-      })
-
-      // loader exit
+    tl.to({}, { duration: 1.2 }) // Preload buffer
       .to(loaderRef.current, {
         yPercent: -100,
         duration: 1,
-        onComplete: () => {
-          if (isFirstLoad.current) {
-            setHideLoader(true);
-            setShowApp(true);
-            isFirstLoad.current = false;
-          } else {
-            setIsTransitioning(false);
-          }
-        },
+        onComplete: () => setIsLoading(false),
       });
   };
 
-  // Initial load
   useEffect(() => {
     runLoaderAnimation();
-  }, []);
-
-  // Route change detection
-  useEffect(() => {
-    if (!isFirstLoad.current) {
-      setIsTransitioning(true);
-      setHideLoader(false);
-      window.scrollTo(0, 0);
-
-      // Small delay before animation
-      setTimeout(() => {
-        runLoaderAnimation();
-      }, 100);
-    }
   }, [location.pathname]);
 
   return (
     <>
-      {(!hideLoader || isTransitioning) && (
+      {isLoading && (
         <div
           ref={loaderRef}
-          className='fixed inset-0 z-[9999] flex items-center justify-center bg-black will-change-transform'
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black"
         >
-          <h1
-            ref={textRef}
-            className='text-4xl text-white loader-text font-monumentExtended'
-          >
-            LOADING
-          </h1>
+          <img 
+            src="/images/loading.gif" 
+            alt="Loading" 
+            // Added styling for visibility and sizing
+            className="object-contain h-auto w-100"
+            onError={(e) => console.error("Image failed to load:", e.target.src)}
+          />
         </div>
       )}
-
-      {showApp && children}
+      
+      <div className={isLoading ? "opacity-0" : "opacity-100 transition-opacity duration-500"}>
+        {children}
+      </div>
     </>
   );
 };
