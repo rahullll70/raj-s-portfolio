@@ -5,21 +5,7 @@ const Hero = () => {
     <div>
       <section>
         <div className='flex items-center justify-center gap-6 pt-5 md:flex-row md:gap-8'>
-          <img
-            src='/images/header_design.png'
-            alt=''
-            className='w-xl lg:w-3xl fill-white grayscale'
-          />
-
-          <h1 className='text-4xl text-center lg:text-6xl font-starlightRune'>
-            ShytAnimo
-          </h1>
-          
-          <img
-            src='/images/header_design.png'
-            alt=''
-            className='w-xl lg:w-3xl fill-white grayscale scale-x-[-1]'
-          />
+          <img src="/images/logo_bar.png" alt="" className='w-5xl'/>
         </div>
         <div className='relative p-5 mx-2 my-10 overflow-hidden bg-secondary min-h-72 md:h-80 md:mx-5 rounded-xl md:p-8 '>
           <h1 className='text-[53px] xs:text-5xl md:text-9xl lg:text-[150px] xl:text-[200px] md:mt-2 font-rothefight uppercase leading-none'>

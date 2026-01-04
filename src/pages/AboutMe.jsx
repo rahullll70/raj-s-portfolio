@@ -5,11 +5,9 @@ const AboutMe = () => {
   return (
     <div className='w-screen min-h-screen text-white ovscerflow-x-hidden'>
       {/* Header */}
-      <div className='my-6 text-center md:my-10'>
-        <h1 className='text-2xl md:text-4xl lg:text-6xl font-starlightRune'>
-          ShytAnimo
-        </h1>
-      </div>
+      <div className='flex items-center justify-center gap-6 pt-5 md:flex-row md:gap-8'>
+          <img src="/images/logo_bar.png" alt="" className='w-5xl'/>
+        </div>
 
       {/* Main Content Container */}
       <div className='flex-col items-center justify-center p-6 mx-4 my-6 bg-secondary sm:mx-8 md:mx-20 lg:mx-50 md:my-10 rounded-xl md:p-10'>
